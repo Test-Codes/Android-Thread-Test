@@ -35,4 +35,12 @@ The solution will be evaluated by the following criteria (in prioritized order):
 
 # TODO
 - Update Target SDK version to 22
+- Volatile, Translucent(?)
+- Atomic
+- final for variable, method, class
+- Race condition
+- garbage collector for java and android
+- synchronize method
+- cocurrenthashmap
+
 
