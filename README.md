@@ -44,3 +44,5 @@ The solution will be evaluated by the following criteria (in prioritized order):
 - cocurrenthashmap
 
 
+## 3rd Party libraries
+- Butterknife
