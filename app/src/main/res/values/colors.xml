@@ -3,7 +3,6 @@
     <color name="realm_red">#F0727D</color>
     <color name="realm_red_darker">#DB5C67</color>
     <color name="realm_blue">#428BCA</color>
-    <color name="realm_black">#222222</color>
-    <color name="realm_black_lighter">#333333</color>
+    <color name="realm_black">#333333</color>
     <color name="realm_white">#ffffff</color>
 </resources>
