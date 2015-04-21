@@ -1,7 +1,7 @@
 package com.thefinestartist.realmandroidtest;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -9,7 +9,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 
     @InjectView(R.id.counter_tv)
     TextView counterTv;

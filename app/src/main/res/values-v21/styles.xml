@@ -1,10 +1,12 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/realm_red</item>
-        <item name="colorPrimaryDark">@color/realm_red_darker</item>
-        <item name="colorAccent">@color/realm_blue</item>
+    <style name="AppTheme" parent="android:Theme.Material">
+        <item name="android:colorPrimary">@color/realm_red</item>
+        <item name="android:colorPrimaryDark">@color/realm_red_darker</item>
+        <item name="android:colorAccent">@color/realm_blue</item>
+        <item name="android:textColor">@color/realm_white</item>
+        <item name="android:colorButtonNormal">@color/realm_blue</item>
     </style>
 
 </resources>
