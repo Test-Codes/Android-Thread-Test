@@ -70,7 +70,7 @@ The solution will be evaluated by the following criteria (in prioritized order):
 #### [Report](https://github.com/TheFinestArtist/Realm-Android-Test/blob/master/Report.md)
 
 
-#### [Author](https://www.thefinestartist.com)
+#### [Author](http://www.thefinestartist.com)
     Fullname : Leonardo Taehwan Kim
     Username : The Finest Artist
     Email : contact@thefinestartist.com
