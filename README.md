@@ -64,10 +64,12 @@ The solution will be evaluated by the following criteria (in prioritized order):
 - https://github.com/orhanobut/logger for Android logger
 
 
-#### [Spectation](https://github.com/TheFinestArtist/Realm-Android-Test/blob/master/Spectation.md)
-
+#### [Documentation](https://github.com/TheFinestArtist/Realm-Android-Test/blob/master/Documentation.md)
+- Application Documentation
 
 #### [Report](https://github.com/TheFinestArtist/Realm-Android-Test/blob/master/Report.md)
+- Report about what I've learned
+- I've seen some of the course about Android concurrency from coursera https://class.coursera.org/posaconcurrency-001
 
 
 #### [Author](http://www.thefinestartist.com)
