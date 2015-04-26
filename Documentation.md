@@ -71,7 +71,7 @@
 - TimerWorker
 - Using Timer
 
-There are 6 kinds of counters and 3 kinds of workers. You can pick one of the counter and one of the worker from “initializeCounter” and “initializeWorker” methods.
+There are 6 kinds of counters and 3 kinds of workers. **You can pick one of the counter and one of the worker from _“initializeCounter”_ and _“initializeWorker”_ methods.**
 
 ## Android Life Cycle
 - Activity Created
