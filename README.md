@@ -45,15 +45,15 @@ The solution will be evaluated by the following criteria (in prioritized order):
 
 #### 3rd Party libraries
 - Support Annotation
-    New annotation package with number of useful metadata annotation.
+    - New annotation package with number of useful metadata annotation.
 
 - Butterknife
-    Automatically inject views in layout to corresponding object using @Injectview annotation.
-    Helps to reduce code line and increase code readability.
+    - Automatically inject views in layout to corresponding object using @Injectview annotation.
+    - Helps to reduce code line and increase code readability.
 
 - Logger
-    Simple, pretty, powerful logger for Android.
-    Shows thread, class, method information.
+    - Simple, pretty, powerful logger for Android.
+    - Shows thread, class, method information.
 
 
 #### Reference
