@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.thefinestartist.realmandroidtest.counter.Counter;
-import com.thefinestartist.realmandroidtest.counter.SynchronizedCounter;
+import com.thefinestartist.realmandroidtest.counter.SQLCounter;
 import com.thefinestartist.realmandroidtest.storage.Preferences;
 import com.thefinestartist.realmandroidtest.worker.TimerWorker;
 import com.thefinestartist.realmandroidtest.worker.Worker;
@@ -35,9 +35,10 @@ public class MainActivity extends Activity implements View.OnClickListener, Work
     private void initializeCounter() {
 //        counter = new IntegerCounter();
 //        counter = new AtomicIntegerCounter();
-        counter = new SynchronizedCounter();
-//        counter = new PreferenceCounter(getApplication());
-//        counter = new SQLCounter();
+//        counter = new SynchronizedMethodCounter();
+//        counter = new SynchronizedObjectCounter();
+//        counter = new PreferenceCounter(getApplicationContext());
+        counter = new SQLCounter(getApplicationContext());
     }
 
     private void initializeWorker() {

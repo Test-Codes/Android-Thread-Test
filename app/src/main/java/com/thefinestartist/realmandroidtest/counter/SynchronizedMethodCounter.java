@@ -3,7 +3,7 @@ package com.thefinestartist.realmandroidtest.counter;
 /**
  * Created by TheFinestArtist on 4/25/15.
  */
-public class SynchronizedCounter implements Counter {
+public class SynchronizedMethodCounter implements Counter {
 
     int value;
 

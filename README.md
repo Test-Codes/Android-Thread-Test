@@ -71,6 +71,6 @@ The solution will be evaluated by the following criteria (in prioritized order):
 
 
 #### Author
-    Leonardo Taehwan Kim
-    The Finest Artist
-    contact@thefinestartist.com
+    Fullname : Leonardo Taehwan Kim
+    Username : The Finest Artist
+    Email : contact@thefinestartist.com
