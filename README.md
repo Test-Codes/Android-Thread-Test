@@ -65,8 +65,8 @@ The solution will be evaluated by the following criteria (in prioritized order):
 
 
 #### Spectation
-[Spectation.md](https://github.com/thefinestartist/Realm-Android-Test/raw/master/Spectation.md)
+[Spectation.md](https://github.com/TheFinestArtist/Realm-Android-Test/blob/master/Spectation.md)
 
 
 #### Report
-[Report.md](https://github.com/thefinestartist/Realm-Android-Test/raw/master/Report.md)
+[Report.md](https://github.com/TheFinestArtist/Realm-Android-Test/blob/master/Report.md)
