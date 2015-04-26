@@ -5,29 +5,26 @@
 - You can set up process for activity, service, receiver, provider using android:process in manifest
 - application for default process value
 - Process Lifecycle & Importance
-
-
+```
     Foreground
     Visible
     Service
     Background
     Empty
-
+```
 - Method that run in system callback always run in “UI Thread"
 - "UI Thread” block more that 5 second will cause ANR (Application Not Responding) dialog.
 - Android UI Toolkit is not thread safe
-
-
+```
     Do not block the UI Thread
     Do not access Android UI Components outside the UI Thread
-
+```
 - Accessing UI Thread from other thread
-
-
+```
     Activity.runOnUiThread(Runnable)
     View.post(Runnable)
     View.postDelayed(Runnable, long)
-
+```
 - Using Thread can cause the code complicated, consider using Handler or AsyncTask
 
 #### Android Activity Life Cycle
@@ -51,42 +48,38 @@
 
 - http://en.wikipedia.org/wiki/Final_(Java)
 - Final Classes
-
-
+```
     Final class can not be subclassed
     Grant security and efficiency benefits
     Many of JAVA standard libraries are final
     Method inside final class implicitly work like final method
-
+```
 - Final Methods
-
-
+```
     Cannot be overridden or hidden by subclasses
     Prevent unexpected behaviour of subclass
     Final method has nothing to do with efficiency or performance issue
-
+```
 - Final Variables
-
-
+```
     http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.3.1.2
     Can only be initialized once
         via initializer
         via constructor
     Blank final instance variable must be definitely assigned at the end of every constructor
-
+```
 #### Annotation
 
 - http://en.wikipedia.org/wiki/Java_annotation
 - https://docs.oracle.com/javase/tutorial/java/annotations/
 - Form of syntactic metadata that can be added java code.
-
-
+```
     Classes
     Methods
     Variables
     Parameters
     Packages
-
+```
 #### Javadoc
 - http://en.wikipedia.org/wiki/Javadoc
 - Document generator from Oracle
@@ -95,18 +88,17 @@
 - http://en.wikipedia.org/wiki/Thread_safety
 - A code is thread safe if it only manipulates shared data structure in a manner that guarantees safe execution by multiple thread at the same time
 - Thread Safe
-
-
+```
     Implementation is guaranteed to be free of race conditions when accessed by multiple thread simultaneously
+```
 - Conditionally Safe
-
-
+```
     Different thread can access different objects simultaneously, and access of shared data is protected from race condition
+```
 - Not Thread Safe
-
-
+```
     Code should not accessed simultaneously by different thread
-
+```
 #### Race Condition
 - http://en.wikipedia.org/wiki/Race_condition#Computing
 - A behaviour of electronic, software or other system where the output is dependent on the sequence or timing of other uncontrollable events
@@ -151,17 +143,16 @@
 #### iOS strong, retain, atomic, non-atimic
 - http://www.quora.com/What-is-the-difference-between-strong-retain-nonatomic-etc-in-the-Objective-C-iOS-property
 - Atomic
-
-
+```
     Atomic object is thread safe
     Slow in performance
     Default in iOS
+```
 - Non-Atomic
-
-
+```
     Non-atomic object is not thread safe
     Fast in performance
-
+```
 #### Android SQLite Tutorial
 - http://www.vogella.com/tutorials/AndroidSQLite/article.html
 - SQLite Database is not thread safe
