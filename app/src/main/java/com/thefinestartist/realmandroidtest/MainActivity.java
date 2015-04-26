@@ -2,16 +2,21 @@ package com.thefinestartist.realmandroidtest;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.os.SystemClock;
+import android.support.annotation.NonNull;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.thefinestartist.realmandroidtest.counter.Counter;
+import com.thefinestartist.realmandroidtest.counter.SynchronizedCounter;
+import com.thefinestartist.realmandroidtest.storage.Preferences;
+import com.thefinestartist.realmandroidtest.worker.TimerWorker;
+import com.thefinestartist.realmandroidtest.worker.Worker;
+
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-
-public class MainActivity extends Activity implements View.OnClickListener {
+public class MainActivity extends Activity implements View.OnClickListener, Worker.WorkerListener {
 
     @InjectView(R.id.counter_tv)
     TextView counterTv;
@@ -20,79 +25,114 @@ public class MainActivity extends Activity implements View.OnClickListener {
     @InjectView(R.id.second_bt)
     Button secondBt;
 
-    Thread counterThread;
-    boolean isThreadRunning = false;
-    int count = 0;
+    private Counter counter;
+    private Worker worker;
+    private static final String COUNTER = "COUNTER";
 
+    /**
+     * Initializer
+     */
+    private void initializeCounter() {
+//        counter = new IntegerCounter();
+//        counter = new AtomicIntegerCounter();
+        counter = new SynchronizedCounter();
+//        counter = new PreferenceCounter(getApplication());
+//        counter = new SQLCounter();
+    }
+
+    private void initializeWorker() {
+//        worker = new ThreadWorker();
+//        worker = new AsyncWorker();
+        worker = new TimerWorker();
+    }
+
+    /**
+     * Android Activity Life Cycle
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.inject(this);
 
-        counterTv.setText(String.valueOf(count));
+        initializeCounter();
+        initializeWorker();
+
+        counter.reset();
+
+        counterTv.setText(String.valueOf(counter.getValue()));
         firstBt.setOnClickListener(this);
         secondBt.setOnClickListener(this);
     }
 
     @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        counter.setValue(savedInstanceState.getInt(COUNTER));
+        counterTv.setText(String.valueOf(counter.getValue()));
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
-        if (isThreadRunning)
-            toggleThread();
+        if (Preferences.isRunning(getApplicationContext()))
+            worker.start(this);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        if (isThreadRunning)
-            toggleThread();
+        if (Preferences.isRunning(getApplicationContext()))
+            worker.stop();
     }
 
     @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        outState.putInt(COUNTER, counter.getValue());
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    /**
+     * Listeners
+     */
+    @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            // When clicking the first button, the counter should increase by 1.
             case R.id.first_bt:
                 updateCouter();
                 break;
-            // When clicking the second button, it should start a background thread that updates the counter by 1 every second. Clicking the button again, should stop this background thread.
             case R.id.second_bt:
-                toggleThread();
+                if (!Preferences.isRunning(getApplicationContext())) {
+                    worker.start(this);
+                    Preferences.setRunning(getApplicationContext(), true);
+                } else {
+                    worker.stop();
+                    Preferences.setRunning(getApplicationContext(), false);
+                }
                 break;
         }
+    }
+
+    @Override
+    public void work() {
+        updateCouter();
     }
 
     /**
      * Private Methods
      */
     private void updateCouter() {
-        count++;
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                counterTv.setText(String.valueOf(count));
+                counter.increment();
+                counterTv.setText(String.valueOf(counter.getValue()));
             }
         });
-    }
-
-    private void toggleThread() {
-        if (counterThread == null) {
-            counterThread = new Thread() {
-                @Override
-                public void run() {
-                    while (true) {
-                        updateCouter();
-                        SystemClock.sleep(1000);
-                    }
-                }
-            };
-            counterThread.start();
-            isThreadRunning = true;
-        } else {
-            counterThread.interrupt();
-            counterThread = null;
-            isThreadRunning = false;
-        }
     }
 }
