@@ -44,6 +44,10 @@ public class SQLCounter implements Counter {
         @Override
         public void onCreate(SQLiteDatabase db) {
             db.execSQL(TABLE_CREATE_COUNTER);
+
+            ContentValues values = new ContentValues();
+            values.put(KEY_COUNTER, 0);
+            db.insert(TABLE_NAME_COUNTER, null, values);
         }
 
         @Override

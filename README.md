@@ -66,10 +66,11 @@ The solution will be evaluated by the following criteria (in prioritized order):
 
 #### [Documentation](https://github.com/TheFinestArtist/Realm-Android-Test/blob/master/Documentation.md)
 - Application Documentation
+- Explanation about why it is thread safe
 
 #### [Report](https://github.com/TheFinestArtist/Realm-Android-Test/blob/master/Report.md)
 - Report about what I've learned
-- I've seen some of the course about Android concurrency from coursera https://class.coursera.org/posaconcurrency-001
+- I've seen some of the videos about Android concurrency from coursera https://class.coursera.org/posaconcurrency-001
 
 
 #### [Author](http://www.thefinestartist.com)
