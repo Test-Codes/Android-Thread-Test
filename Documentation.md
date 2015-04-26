@@ -1,4 +1,4 @@
-#### Basic Information
+## Basic Information
 - Supports Android API 15 - 22 (no need for support package)
 - Using 3 libraries
     - Android Annotation
@@ -8,12 +8,14 @@
 - API 15-20 follows Holo design
 - API 21-22 follows Material design
 
-#### UI
+## UI
 - Two button at the bottom
     - First
     - Second
 - One textview for counter
     - It is at the center of the view below toolbar (or action bar) and above buttons
+
+## Counter
 
 #### Counter Policy
 - Keep the value if the app is rotated
@@ -39,6 +41,8 @@
     - using SharedPreference which already is thread-safe
 - SQLCounter
     - using SQLite, which is not thread-safe
+
+## Worker
 
 #### Worker Policy
 - Toggle worker if the second button is pressed
@@ -69,7 +73,7 @@
 
 There are 6 kinds of counters and 3 kinds of workers. You can pick one of the counter and one of the worker from “initializeCounter” and “initializeWorker” methods.
 
-#### Android Life Cycle
+## Android Life Cycle
 - Activity Created
     - onCreate
     - onResume
@@ -83,6 +87,6 @@ There are 6 kinds of counters and 3 kinds of workers. You can pick one of the co
     - onRestoreInstanceState
     - onResume
 
-#### Why it is thread safe
+## Why it is thread safe
 - All of the method for counter are executed in Main Thread.
 - Some of the counter is already thread-safe, so you can use the method in any thread.
