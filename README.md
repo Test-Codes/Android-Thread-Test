@@ -64,9 +64,13 @@ The solution will be evaluated by the following criteria (in prioritized order):
 - https://github.com/orhanobut/logger for Android logger
 
 
-#### Spectation
-[Spectation.md](https://github.com/TheFinestArtist/Realm-Android-Test/blob/master/Spectation.md)
+#### [Spectation](https://github.com/TheFinestArtist/Realm-Android-Test/blob/master/Spectation.md)
 
 
-#### Report
-[Report.md](https://github.com/TheFinestArtist/Realm-Android-Test/blob/master/Report.md)
+#### [Report](https://github.com/TheFinestArtist/Realm-Android-Test/blob/master/Report.md)
+
+
+#### Author
+    Leonardo Taehwan Kim
+    The Finest Artist
+    contact@thefinestartist.com
