@@ -8,9 +8,10 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.thefinestartist.realmandroidtest.counter.Counter;
+import com.thefinestartist.realmandroidtest.counter.IntegerCounter;
 import com.thefinestartist.realmandroidtest.counter.SQLCounter;
 import com.thefinestartist.realmandroidtest.storage.Preferences;
-import com.thefinestartist.realmandroidtest.worker.TimerWorker;
+import com.thefinestartist.realmandroidtest.worker.ThreadWorker;
 import com.thefinestartist.realmandroidtest.worker.Worker;
 
 import butterknife.ButterKnife;
@@ -33,7 +34,7 @@ public class MainActivity extends Activity implements View.OnClickListener, Work
      * Initializer
      */
     private void initializeCounter() {
-//        counter = new IntegerCounter();
+        counter = new IntegerCounter();
 //        counter = new AtomicIntegerCounter();
 //        counter = new SynchronizedMethodCounter();
 //        counter = new SynchronizedObjectCounter();
@@ -42,9 +43,9 @@ public class MainActivity extends Activity implements View.OnClickListener, Work
     }
 
     private void initializeWorker() {
-//        worker = new ThreadWorker();
+        worker = new ThreadWorker();
 //        worker = new AsyncWorker();
-        worker = new TimerWorker();
+//        worker = new TimerWorker();
     }
 
     /**

@@ -1,5 +1,4 @@
 #### Android Process & Thread
-
 - http://developer.android.com/guide/components/processes-and-threads.html
 - 1 Process & 1 Thread when start application
 - You can set up process for activity, service, receiver, provider using android:process in manifest
@@ -22,24 +21,20 @@
 - Using Thread can cause the code complicated, consider using Handler or AsyncTask
 
 #### Android Activity Life Cycle
-
 - http://developer.android.com/guide/components/activities.html#SavingActivityState
 - http://developer.android.com/training/basics/activity-lifecycle/recreating.html
 
 #### Varargs (Variable number of arguments)
-
 - http://docs.oracle.com/javase/1.5.0/docs/guide/language/varargs.html
 - Method that took arbitrary number of argument, varargs features automate and hide the process
 - It is upward compatible with preexisting APIs
 - String.format(String format, Object… args)
 
 #### Autoboxing
-
 - http://docs.oracle.com/javase/1.5.0/docs/guide/language/autoboxing.html
 - Automating process to cast between primitive value and appropriate wrapper class
 
 #### Final (JAVA)
-
 - http://en.wikipedia.org/wiki/Final_(Java)
 - Final Classes
     - Final class can not be subclassed
@@ -58,7 +53,6 @@
     - Blank final instance variable must be definitely assigned at the end of every constructor
 
 #### Annotation
-
 - http://en.wikipedia.org/wiki/Java_annotation
 - https://docs.oracle.com/javase/tutorial/java/annotations/
 - Form of syntactic metadata that can be added java code.
