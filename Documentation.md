@@ -65,11 +65,11 @@
 
 #### Workers
 - ThreadWorker
-- Using thread
+    - Using thread
 - AsyncWorker
-- Using AsyncTask
+    - Using AsyncTask
 - TimerWorker
-- Using Timer
+    - Using Timer
 
 There are 6 kinds of counters and 3 kinds of workers. **You can pick one of the counter and one of the worker from _“initializeCounter”_ and _“initializeWorker”_ methods.**
 
