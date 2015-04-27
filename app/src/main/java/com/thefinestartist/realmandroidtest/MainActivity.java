@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import com.thefinestartist.realmandroidtest.counter.Counter;
 import com.thefinestartist.realmandroidtest.counter.IntegerCounter;
-import com.thefinestartist.realmandroidtest.counter.SQLCounter;
 import com.thefinestartist.realmandroidtest.storage.Preferences;
 import com.thefinestartist.realmandroidtest.worker.ThreadWorker;
 import com.thefinestartist.realmandroidtest.worker.Worker;
@@ -39,7 +38,7 @@ public class MainActivity extends Activity implements View.OnClickListener, Work
 //        counter = new SynchronizedMethodCounter();
 //        counter = new SynchronizedObjectCounter();
 //        counter = new PreferenceCounter(getApplicationContext());
-        counter = new SQLCounter(getApplicationContext());
+//        counter = new SQLCounter(getApplicationContext());
     }
 
     private void initializeWorker() {

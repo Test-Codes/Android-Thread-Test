@@ -131,3 +131,33 @@
 - http://www.vogella.com/tutorials/AndroidSQLite/article.html
 - SQLite Database is not thread safe
 - http://touchlabblog.tumblr.com/post/24474398246/android-sqlite-locking
+
+#### Volatile
+- http://en.wikipedia.org/wiki/Volatile_(computer_programming)
+- http://www.javamex.com/tutorials/synchronization_volatile.shtml
+- When variable's value will modified by different threads
+- Access of the variable acts as though it is enclosed in synchronized block (synchronised on itself)
+
+#### Volatile in Java 5
+- http://www.javamex.com/tutorials/synchronization_volatile_java_5.shtml
+- Accessing volatile variable creates memory barrier
+- Synchronize all cached copies of variables with main memory
+
+#### Transient
+- http://en.wikibooks.org/wiki/Java_Programming/Keywords/transient
+- member variable not to be serialized when it persist to stream of bytes
+- Not transferred over network, lost intentionally
+- http://stackoverflow.com/questions/910374/why-does-java-have-transient-variables
+
+
+#### Android Testing
+- https://developer.android.com/tools/testing/testing_android.html
+- http://www.vogella.com/tutorials/JUnit/article.html
+- https://www.youtube.com/watch?v=z47B1nhC3K0
+
+#### More to Read
+- https://docs.oracle.com/javase/tutorial/essential/concurrency/index.html
+- http://en.wikipedia.org/wiki/Happened-before
+- http://en.wikipedia.org/wiki/Synchronization_(computer_science)
+- http://en.wikipedia.org/wiki/Critical_section
+- http://www.oracle.com/technetwork/articles/java/javaserial-1536170.html
