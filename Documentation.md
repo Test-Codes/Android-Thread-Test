@@ -98,10 +98,10 @@ There are 6 kinds of counters and 3 kinds of workers. **You can pick one of the 
 ```
 - Testing whether the Counter class is thread-safe
 - Some of the counter class is thread-safe and some are not as expected
-- There will be 100 thread pool running increment method
+- There will be 100 threads running increment method
 - There will be 1000 times increment
-- If the value is 1000 after all of the pool is done, it is succeeded.
-- For IntegerCounter, AtomicIntegerCounter, SynchronizedMethodCounter, SynchronizedObjectCounter I made is 100000 times of work since the calculation is so fast.
+- If the value is 1000 after all of the increments are done, it is succeeded.
+- For IntegerCounter, AtomicIntegerCounter, SynchronizedMethodCounter, SynchronizedObjectCounter I made is 100000 times of increment since the integer calculation is so fast.
 
 #### Test Result
 - PreferenceCounter, SQLCounter, IntegerCounter is not thread-safe
