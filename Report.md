@@ -147,6 +147,11 @@
 - http://stackoverflow.com/questions/19744508/volatile-vs-atomic
 - int, long, double is not atomic and all other primitive variables are already atomic
 
+#### The volatile keyword is used:
+- to make non atomic 64-bit operations atomic: long and double. (all other, primitive accesses are already guaranteed to be atomic!)
+- to make variable updates guaranteed to be seen by other threads + visibility effects: after writing to a volatile variable, all the variables that where visible before writing that variable become visible to another thread after reading the same volatile variable (happen-before ordering).
+
+
 #### Transient
 - http://en.wikibooks.org/wiki/Java_Programming/Keywords/transient
 - member variable not to be serialized when it persist to stream of bytes
