@@ -142,6 +142,10 @@
 - http://www.javamex.com/tutorials/synchronization_volatile_java_5.shtml
 - Accessing volatile variable creates memory barrier
 - Synchronize all cached copies of variables with main memory
+ 
+#### Volatile
+- http://stackoverflow.com/questions/19744508/volatile-vs-atomic
+- int, long, double is not atomic and all other primitive variables are already atomic
 
 #### Transient
 - http://en.wikibooks.org/wiki/Java_Programming/Keywords/transient
