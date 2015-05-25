@@ -158,6 +158,9 @@
 - Not transferred over network, lost intentionally
 - http://stackoverflow.com/questions/910374/why-does-java-have-transient-variables
 
+#### Native
+- The native keyword is applied to a method to indicate that the method is implemented in native code using JNI(Java Native Interface).
+- http://stackoverflow.com/questions/6101311/what-is-the-native-keyword-in-java-for
 
 #### Android Testing
 - https://developer.android.com/tools/testing/testing_android.html
