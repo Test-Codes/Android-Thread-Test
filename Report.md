@@ -162,6 +162,10 @@
 - The native keyword is applied to a method to indicate that the method is implemented in native code using JNI(Java Native Interface).
 - http://stackoverflow.com/questions/6101311/what-is-the-native-keyword-in-java-for
 
+#### Generic programming
+- Style of computer programming in which algorithms are written in terms of types to-be-specified-later that are then instantiated when needed for specific types provided as parameters
+- http://en.wikipedia.org/wiki/Generic_programming
+
 #### Android Testing
 - https://developer.android.com/tools/testing/testing_android.html
 - http://www.vogella.com/tutorials/JUnit/article.html
