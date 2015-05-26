@@ -169,31 +169,6 @@
 #### Covariant return type
 - Covariant return type of a method is one that can be replaced by a "narrower" type when the method is overridden in a subclass
 - http://en.wikipedia.org/wiki/Covariant_return_type
-```
-// Classes used as return types:
- 
- class A {
- }
- 
- class B extends A {
- }
- 
- // "Class B is more narrow than class A"
- // Classes demonstrating method overriding:
- 
- class C {
-     A getFoo() {
-         return new A();
-     }
- }
- 
- class D extends C {
-//Overriding getFoo() in father class C
-     B getFoo() {
-         return new B();
-     }
- }
-```
 
 #### Android Testing
 - https://developer.android.com/tools/testing/testing_android.html
